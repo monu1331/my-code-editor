@@ -3,10 +3,8 @@
 <head>
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width,initial-scale=1" />
-  <title>Simple Code Editor (GitHub Pages)</title>
+  <title>Simple Code Editor (Works)</title>
   <link rel="stylesheet" href="styles.css" />
-  <!-- Ace Editor CDN -->
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/ace/1.15.0/ace.js"></script>
 </head>
 <body>
   <header>
@@ -25,7 +23,9 @@
   </header>
 
   <main>
-    <div id="editor" aria-label="code editor"></div>
+    <!-- Fallback simple editor: textarea (always works) -->
+    <textarea id="editor" aria-label="code editor"></textarea>
+
     <div id="previewWrap">
       <div class="previewHeader">Preview</div>
       <iframe id="preview" sandbox="allow-forms allow-scripts allow-same-origin"></iframe>
@@ -36,7 +36,6 @@
     <small>Built for GitHub Pages • No backend • Files stored in your browser</small>
   </footer>
 
-  <input id="fileInput" type="file" accept=".html,.txt" style="display:none" />
   <script src="script.js"></script>
 </body>
 </html>
